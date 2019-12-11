@@ -236,11 +236,11 @@ public class MachineUtils {
                 size=file.getFreeSpace();
                 max=file.getPath().substring(0, 1);
             }
-            //                System.out.println("Free space = " + (file.getFreeSpace()/(1024*1024))/1024);  //显示GB大小
-            //                System.out.println("Usable space = " + _file.getUsableSpace());  
-            //                System.out.println("Total space = " + _file.getTotalSpace());  
-            //                System.out.println("used space  = " + (_file.getTotalSpace()-_file.getFreeSpace()));  
-            //                System.out.println();  
+            System.out.println("Free space = " + (file.getFreeSpace()/(1024*1024))/1024);  //显示GB大小
+            System.out.println("Usable space = " + (file.getUsableSpace()/(1024*1024))/1024);
+            System.out.println("Total space = " + (file.getTotalSpace()/(1024*1024))/1024);
+            System.out.println("used space  = " + ((file.getTotalSpace()-file.getFreeSpace())/(1024*1024))/1024);
+            System.out.println();
         }  
         System.out.println(max);  
         return max;

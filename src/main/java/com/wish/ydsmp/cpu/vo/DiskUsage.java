@@ -7,14 +7,34 @@ package com.wish.ydsmp.cpu.vo;
  * @modified By:
  */
 public class DiskUsage {
-
+    /**
+     * 盘符
+     */
+    private String name;
+    /**
+     * 可用空间
+     */
     private String freeSpace;
-
+    /**
+     * 可使用空间（同可用空间）
+     */
     private String usableSpace;
-
+    /**
+     * 总空间
+     */
     private String totalSpace;
-
+    /**
+     * 已使用空间
+     */
     private String usedSpace;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getFreeSpace() {
         return freeSpace;
@@ -45,15 +65,6 @@ public class DiskUsage {
     }
 
     public void setUsedSpace(String usedSpace) {
-        this.usedSpace = usedSpace;
-    }
-
-    public DiskUsage() {}
-
-    public DiskUsage(String freeSpace, String usableSpace, String totalSpace, String usedSpace) {
-        this.freeSpace = freeSpace;
-        this.usableSpace = usableSpace;
-        this.totalSpace = totalSpace;
         this.usedSpace = usedSpace;
     }
 
